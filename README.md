@@ -4,7 +4,7 @@
 Given two simple and disjoint polygons P and Q, where P lies strictly to the leftof Q, compute the first points on the polygons that will collide if P is translated horizontally and in the positive x-direction, 
 or determines that they do not collide.
 
-[Collision](./Collision-detection.png)
+![Collision](./Collision-detection.png)
 
 Upper bounds: O((n+m) log(n+m)) time, where n = |P| and m = |Q|.
 
