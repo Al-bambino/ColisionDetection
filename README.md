@@ -19,12 +19,20 @@ This will take **`O((n + m) * (log n + log m)).`**
   
 ### Find visible intervals of polygon
 Visible intervals are polygon's lines (or parts of the lines) on which collision could happen.
+
 We will use sweep line algorithm for finding them. Status structure will be `AVL tree`, so this will take **`O(n*(log n))`** time.
  - Sort points by `Y coordinate`.
  - In `sweep line status` keep track of all polygon lines that sweep line intersects.
+ - Keep an array of visible intevals. Each interval have:
+   * startY 
+   * endY (endY > startY)
+   * polygonLine - reference to polygon line that contains that interval (parent - we will need it later)
  - Events are polygon points.  
- - For each point, get the rightmost (leftmost) line from sweep line status and update that it is visible from previously checked point to current point.
+ - For each point **p**, get the rightmost (leftmost) line **l** from sweep line status. Push into visible intervals array new inteval which start on **previously_checked_point.y** to **p.y**, and it parent is **l** .
  - Add all lines that starts from that point into status structure, and delete all lines that ends in that point.
+ 
+![visible](./visible-right.png)
+![visible](./visible-left.png)
  
  ### Finding hit spot on polygon
 Once we have all polygon's `visible intervals`, it's easy to find where collision could happen. 
