@@ -8,6 +8,7 @@
   * Calculate distance between those two points.
   * Do the same thing for right polygon.
   * Keep track of minimum distance between those points => it's solution ;)
+  
 This will take **`O((n + m) * (log n + log m)).`**
   
 ### Find visible intervals of polygon
