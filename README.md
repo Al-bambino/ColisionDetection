@@ -46,7 +46,9 @@ Doing this for `n` points on left polygon and `m` points for right polygon we ge
 ## Usage
 
 Draw polygon by adding points on canvas (left mouse button).
+
 > First polygon you draw will be left, keep that in mind.
+
 For closing polygon simply press mouse button on first polyogn point.
 After drawing left and right polygon, press anywhere to begin algorithm.
 
