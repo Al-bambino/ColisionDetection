@@ -43,3 +43,10 @@ Now, we now **Y coordinate** of collision - it's `p.Y`, also we know line on whi
 
 Doing this for `n` points on left polygon and `m` points for right polygon we get **`O((n + m) * (log n + log m)).`**
  
+## Usage
+
+Draw polygon by adding points on canvas (left mouse button).
+> First polygon you draw will be left, keep that in mind.
+For closing polygon simply press mouse button on first polyogn point.
+After drawing left and right polygon, press anywhere to begin algorithm.
+
