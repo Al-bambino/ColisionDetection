@@ -26,7 +26,7 @@ We will use sweep line algorithm for finding them. Status structure will be `AVL
    * endY (endY > startY)
    * polygonLine - reference to polygon line that contains that interval (parent - we will need it later)
  - Events are polygon points.  
- - For each point **p**, get the rightmost (leftmost) line **l** from sweep line status. Push into visible intervals array new inteval which start on **previously_checked_point.y** to **p.y**, and it parent is **l** .
+ - For each point **p**, get the rightmost (leftmost) line **l** from sweep line status. Push into visible intervals array new inteval which start on **previously_checked_point.y** and ends on **p.y**, it's parent is **l** .
  - Add all lines that starts from that point into status structure, and delete all lines that ends in that point.
  
 ![visible](./visible-right.png)
