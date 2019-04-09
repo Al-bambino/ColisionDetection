@@ -4,7 +4,7 @@
 Given two simple and disjoint polygons P and Q, where P lies strictly to the leftof Q, compute the first points on the polygons that will collide if P is translated horizontally and in the positive x-direction, 
 or determines that they do not collide.
 
-![Collision](./Collision-detection.png)
+![Collision](img/Collision-detection.png)
 
 Upper bounds: **`O((n + m) * (log n + log m)).`** time, where n = |P| and m = |Q|.
 
@@ -29,8 +29,8 @@ We will use sweep line algorithm for finding them. Status structure will be `AVL
  - For each point **p**, get the rightmost (leftmost) line **l** from sweep line status. Push into visible intervals array new inteval which start on **previously_checked_point.y** and ends on **p.y**, it's parent is **l** .
  - Add all lines that starts from that point into status structure, and delete all lines that ends in that point.
  
-![visible](./visible-right.png)
-![visible](./visible-left.png)
+![visible](img/visible-right.png)
+![visible](img/visible-left.png)
  
  ### Finding hit spot on polygon
 Once we have all polygon's `visible intervals`, it's easy to find where collision could happen. 
