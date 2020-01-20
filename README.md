@@ -6,7 +6,7 @@ or determines that they do not collide.
 
 ![Collision](img/Collision-detection.png)
 
-Upper bounds: **`O((n + m) * (log n + log m)).`** time, where n = |P| and m = |Q|.
+Time complexity: **`O((n + m) * (log n + log m))`**, where n = |P| and m = |Q|.
 
 ## Solution
   * Find visible intervals of both polygons.
